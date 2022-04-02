@@ -2,8 +2,11 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		domains: ['acegif.com'],
+		domains: ['res.cloudinary.com'],
 	},
 };
 
+const withImages = require('next-images');
+
+module.exports = withImages();
 module.exports = nextConfig;

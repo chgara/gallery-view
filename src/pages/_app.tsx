@@ -1,6 +1,6 @@
 import 'sanitize.css';
 import '../utils/styles/main.css';
-import Layout from 'components/layout';
+import Layout from 'components/Layout';
 import type { AppProps } from 'next/app';
 
 function MyApp({ Component, pageProps }: AppProps): JSX.Element {

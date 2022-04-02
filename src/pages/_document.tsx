@@ -43,6 +43,11 @@ class MyDocument extends Document {
 					<link
 						rel='preconnect'
 						href='https://fonts.gstatic.com'
+						crossOrigin='true'
+					/>
+					<link
+						href='https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Roboto&display=swap'
+						rel='stylesheet'
 					/>
 					<style
 						data-aphrodite
