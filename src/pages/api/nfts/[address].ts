@@ -1,14 +1,17 @@
 import { NFT } from 'utils/types';
 import { createAlchemyWeb3 } from '@alch/alchemy-web3';
 import { apiKey, apiUrl } from 'utils/config';
+import { NextApiRequest, NextApiResponse } from 'next';
 
-export default async function handler(req, res) {
+export default async function handler(
+	req: NextApiRequest,
+	res: NextApiResponse
+): Promise<void> {
 	const { address } = req.query;
 	const reg = /^0x[a-fA-F0-9]{40}$/;
 	const nfts: NFT[] = [];
 
-	// Should be a valid address
-	if (!reg.test(address)) {
+	if (typeof address !== 'string' || !reg.test(address)) {
 		res.status(200).json({
 			success: false,
 			message: 'Invalid address',
@@ -18,7 +21,7 @@ export default async function handler(req, res) {
 
 	const web3 = createAlchemyWeb3(`${apiUrl}${apiKey}`);
 	const results = await web3.alchemy.getNfts({
-		owner: address,
+		owner: typeof address === 'string' ? address : address[0],
 	});
 	for (const result of results.ownedNfts) {
 		if (result?.metadata?.image) {

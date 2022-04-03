@@ -5,19 +5,23 @@ import theme from 'utils/themes';
 const SearchBodyInput: React.FC<Iprops> = props => {
 	const [value, setValue] = useState(props.defaultValue);
 
-	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+	const handleChange = (
+		e: React.ChangeEvent<HTMLInputElement>
+	): void => {
 		e.preventDefault();
 		setValue(e.target.value);
 	};
 
-	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+	const handleSubmit = (
+		e: React.FormEvent<HTMLFormElement>
+	): void => {
 		e.preventDefault();
 		props.setAddress(value);
 	};
 
 	const onClick = (
 		e: React.MouseEvent<HTMLButtonElement, MouseEvent>
-	) => {
+	): void => {
 		e.preventDefault();
 		props.setAddress(value);
 	};

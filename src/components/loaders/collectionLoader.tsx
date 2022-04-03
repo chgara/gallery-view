@@ -1,5 +1,4 @@
 import ContentLoader from 'react-content-loader';
-import theme from 'utils/themes';
 
 const NetflixLoader: React.FC<Iprops> = props => {
 	// const { rows, columns, coverHeight, coverWidth, padding, speed } =
@@ -24,8 +23,6 @@ const NetflixLoader: React.FC<Iprops> = props => {
 			speed={speed}
 			width={columns * coverWidthWithPadding}
 			height={rows * coverHeightWithPadding}
-			primarycolor={theme.colors.primary}
-			secondarycolor={theme.colors.fourth}
 			{...props}
 		>
 			<rect
@@ -38,10 +35,10 @@ const NetflixLoader: React.FC<Iprops> = props => {
 			/>
 
 			{covers.map((g, i) => {
-				let vy =
+				const vy =
 					Math.floor(i / columns) * coverHeightWithPadding +
 					initial;
-				let vx =
+				const vx =
 					(i * coverWidthWithPadding) %
 					(columns * coverWidthWithPadding);
 				return (

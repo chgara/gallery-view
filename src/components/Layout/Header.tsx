@@ -1,7 +1,7 @@
 import { css, StyleSheet } from 'aphrodite';
 import Navbar from 'components/Navbar';
 
-const Content: React.FC<Iprops> = props => {
+const Content: React.FC<Iprops> = () => {
 	return (
 		<header className={css(styles.header)}>
 			<Navbar />

@@ -3,7 +3,7 @@ import src from '../../../public/background.jpg';
 import Image from 'next/image';
 import theme from 'utils/themes';
 
-const BackgroundImage: React.FC<props> = props => {
+const BackgroundImage: React.FC<props> = () => {
 	return (
 		<div className={css(styles.container)}>
 			<Image
@@ -11,6 +11,8 @@ const BackgroundImage: React.FC<props> = props => {
 				src={src}
 				layout='fill'
 				objectFit='cover'
+				role='presentation'
+				alt='cover'
 			/>
 		</div>
 	);

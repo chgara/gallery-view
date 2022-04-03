@@ -2,7 +2,7 @@ import Link from 'next/link';
 import { css, StyleSheet } from 'aphrodite';
 import theme from 'utils/themes';
 
-const Navbar: React.FC<Iprops> = props => {
+const Navbar: React.FC<Iprops> = () => {
 	return (
 		<nav className={css(styles.nav)}>
 			<div className={css(styles.logo)}>

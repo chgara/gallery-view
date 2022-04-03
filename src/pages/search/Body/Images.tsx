@@ -3,7 +3,6 @@ import theme from 'utils/themes';
 import Image from 'next/image';
 import { css, StyleSheet } from 'aphrodite';
 import NetflixLoader from 'components/loaders/collectionLoader';
-import { useState } from 'react';
 
 const SearchBodyImages: React.FC<Iprops> = props => {
 	const { loading, nfts } = props;
@@ -15,34 +14,36 @@ const SearchBodyImages: React.FC<Iprops> = props => {
 			) : (
 				<div className={css(styles.nfts)}>
 					<h2 className={css(styles.h2)}>Owned Items by</h2>
-					{nfts.length === 0 ? (
+					{nfts?.length && nfts.length === 0 ? (
 						<div className={css(styles.noResults)}>
 							<p>No results found</p>
 						</div>
 					) : (
 						<ul className={css(styles.grid)}>
-							{nfts.map((nft: NFT, id) => (
-								<li
-									key={id}
-									className={css(styles.gridItem)}
-								>
-									<Image
-										src={
-											'https://res.cloudinary.com/demo/image/fetch/' +
-											nft.image
-										}
-										objectFit='cover'
-										layout='fill'
-										alt={nft.name}
-										placeholder='blur'
-										blurDataURL='/blur.jpg'
-										quality={20}
-									/>
-									<p className={css(styles.gridP)}>
-										{nft.name}
-									</p>
-								</li>
-							))}
+							{nfts?.map &&
+								nfts.map((nft: NFT, id) => (
+									<li key={id}>
+										<Image
+											src={
+												'https://res.cloudinary.com/demo/image/fetch/' +
+												nft.image
+											}
+											objectFit='cover'
+											layout='fill'
+											alt={nft.name}
+											placeholder='blur'
+											blurDataURL='/blur.jpg'
+											quality={20}
+										/>
+										<p
+											className={css(
+												styles.gridP
+											)}
+										>
+											{nft.name}
+										</p>
+									</li>
+								))}
 						</ul>
 					)}
 				</div>
