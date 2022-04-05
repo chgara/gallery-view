@@ -1,7 +1,21 @@
+import Body from 'components/search/Body';
+import Header from 'components/search/Header';
 import type { NextPage } from 'next';
+import { css, StyleSheet } from 'aphrodite';
 
-const Home: NextPage = () => {
-	return <div>Hola :)</div>;
+const Search: NextPage = () => {
+	return (
+		<article className={css(styles.container)}>
+			<Header />
+			<Body />
+		</article>
+	);
 };
 
-export default Home;
+const styles = StyleSheet.create({
+	container: {
+		width: '100%',
+	},
+});
+
+export default Search;

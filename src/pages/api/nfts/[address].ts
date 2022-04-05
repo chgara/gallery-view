@@ -12,6 +12,7 @@ export default async function handler(
 	const nfts: NFT[] = [];
 
 	if (typeof address !== 'string' || !reg.test(address)) {
+		console.log('Wrong address');
 		res.status(200).json({
 			success: false,
 			message: 'Invalid address',

@@ -6,6 +6,7 @@ import Images from './Images';
 
 const SearchBody: React.FC<Iprops> = () => {
 	const defaultValue = '0x2ceF1dB9E3C0f323eA6350D6A25c777aeC15E457';
+	// const defaultValue = '0x18031Cdf42654910703984e18F172316BC7aE0f4';
 	const [address, setAddress] = useState(defaultValue);
 	const [isImageLoading, setIsImageLoading] = useState(true);
 	const [nfts, loading] = useNFTs(address);
