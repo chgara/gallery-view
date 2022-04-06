@@ -89,6 +89,21 @@ const styles = StyleSheet.create({
 		gridAutoRows: 'minmax(400px, auto)',
 		gridGap: '1em',
 		listStyle: 'none',
+		padding: '0',
+
+		'@media (max-width: 1500px)': {
+			width: '100%',
+		},
+
+		'@media (max-width: 900px)': {
+			// Grid of 2*x
+			gridTemplateColumns: 'repeat(2, 1fr)',
+		},
+
+		'@media (max-width: 670px)': {
+			// Grid of 2*x
+			gridTemplateColumns: 'repeat(1, 1fr)',
+		},
 	},
 	gridP: {
 		padding: theme.spacing.smaller,
