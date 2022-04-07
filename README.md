@@ -1,34 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Gallery view
 
-## Getting Started
+<img src="https://i.ibb.co/8d8fyBt/gallery.png" alt="Image of the repo">
 
-First, run the development server:
+An NFT viewer for collections or what wallet owns.
+<br>
 
-```bash
-npm run dev
-# or
-yarn dev
+This is the code part of the tutorial "Gallery-View" for the web3 Hackathon
+
+>
+
+This web app lets you
+
+-   View the nfts that other persons posses
+-   View nfts owned by someone
+
+<br>
+
+## Requeriments and installation
+
+Frist of all you will need NodeJs and Yarn installed in a LTS version.
+
+1. Clone the repo and install the dependencies:
+
+```sh
+git clone <thisrepo>
+cd ./gallery-view
+yarn install
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Go to alchemy.com and [create an app](https://dashboard.alchemyapi.io/) to have key access.
+   <br>
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+    Then create a .env.local file at the root folder and put inside:
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+```sh
+ALCHEMY_API_KEY="youralchemykey"
+ALCHEMY_API_URL="the url till the/v2/"
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+3. Run the app by just run
 
-## Learn More
+```sh
+yarn dev # only for development mode
+yarn build && yarn start # for production mode
+```
 
-To learn more about Next.js, take a look at the following resources:
+<br>
 
--   [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
--   [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Tecnologies used
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+These are the tecnologies used in this repo:
 
-## Deploy on Vercel
+-   NextJS <small>(TypeScript)</small>
+-   React Dom
+-   Alchemy NFTs APIs
+-   Aprhodite <small> (For styling like react native)</small>
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+<strong>!! Important !! The key part on this proyect is under the file src/pages/api/nfts.ts.
+<strong/>
