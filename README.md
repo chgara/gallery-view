@@ -16,6 +16,16 @@ This web app lets you
 
 <br>
 
+## Online demo
+
+You can view the proyect online at this site: [webapp](https://gallery-view-seven.vercel.app/) <small>(Online proyect is on Rinkeby Chain)</small>.
+<br>
+To make it work put an address of the <strong>Rinkeby Chain</strong> and see the NFTs that it collects.
+<br>
+
+If you want to view a demostration of how it works or how to use it properly please refer to the <br>
+hackathon academy video.
+
 ## Requeriments and installation
 
 Frist of all you will need NodeJs and Yarn installed in a LTS version.
@@ -31,7 +41,8 @@ yarn install
 2. Go to alchemy.com and [create an app](https://dashboard.alchemyapi.io/) to have key access.
    <br>
 
-    Then create a .env.local file at the root folder and put inside:
+    Then create a .env.local file at the root folder and put inside: <br>
+    <small>(Note that the url env variable will determine the Ethereum chain that your proyect will use) </small>
 
 ```sh
 ALCHEMY_API_KEY="youralchemykey"
