@@ -2,28 +2,20 @@
 
 <img src="https://i.ibb.co/8d8fyBt/gallery.png" alt="Image of the repo">
 
-An NFT viewer for collections or what wallet owns.
-<br>
-
+An NFT viewer for collections or what wallet owns.\
 This is the code part of the tutorial "Gallery-View" for the web3 Hackathon
 
->
-
-This web app lets you
+**This web app lets you:**
 
 -   View the nfts that other persons posses
 -   View nfts owned by someone
 
-<br>
-
 ## Online demo
 
-You can view the proyect online at this site: [webapp](https://gallery-view-seven.vercel.app/) <small>(Online proyect is on Rinkeby Chain)</small>.
-<br>
-To make it work put an address of the <strong>Rinkeby Chain</strong> and see the NFTs that it collects.
-<br>
+You can view the proyect online at this site: [webapp](https://gallery-view-seven.vercel.app/) <small>(Online proyect is on Goerly Chain)</small>.\
+To make it work put an address of the <strong>Goerly Chain</strong> and see the NFTs that it collects.
 
-If you want to view a demostration of how it works or how to use it properly please refer to the <br>
+If you want to view a demostration of how it works or how to use it properly please refer to the\
 hackathon academy video.
 
 ## Requeriments and installation
@@ -39,10 +31,11 @@ yarn install
 ```
 
 2. Go to alchemy.com and [create an app](https://dashboard.alchemyapi.io/) to have key access.
-   <br>
 
-    Then create a .env.local file at the root folder and put inside: <br>
-    <small>(Note that the url env variable will determine the Ethereum chain that your proyect will use) </small>
+    Then create a .env.local file at the root folder and put inside:\
+    <small>(Note that the url env variable will determine the Ethereum chain that your proyect will use) </small>\
+    **!!!Note!!!**: When writting the **API URL** you should remove everything to the rigth of **/v2/**.\
+    The **URL** will define the chain that your proyect will use, for the demo to work please use Goerly.
 
 ```sh
 ALCHEMY_API_KEY="youralchemykey"
@@ -55,8 +48,6 @@ ALCHEMY_API_URL="the url till the/v2/"
 yarn dev # only for development mode
 yarn build && yarn start # for production mode
 ```
-
-<br>
 
 ## Tecnologies used
 
